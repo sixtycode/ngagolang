@@ -14,7 +14,10 @@ import (
 // Declare type pointer to a template
 var tmpl *template.Template
 
-var nama = []string{"Ujang", "Asep", "Udin", "Dadang"}
+type StrukturData struct {
+	Nama string
+	Umur int
+}
 
 // Using the init function to make sure the template is only parsed once in the program
 func init() {
@@ -26,7 +29,10 @@ func init() {
 func main() {
 	fmt.Println("Hello, World!\n")
 	// Execute myName into the template and print to Stdout
-	err := tmpl.ExecuteTemplate(os.Stdout, "index.html", nama)
+	var data StrukturData
+	data.Nama = "Udin"
+	data.Umur = 19
+	err := tmpl.ExecuteTemplate(os.Stdout, "index.html", &data)
 	if err != nil {
 		log.Fatalln(err)
 	}
