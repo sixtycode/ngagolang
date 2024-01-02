@@ -25,7 +25,7 @@ func main() {
 	fmt.Println("Hello, World!\n")
 	// Execute myName into the template and print to Stdout
 	myName := "Fajrin"
-	err := tmpl.Execute(os.Stdout, myName)
+	err := tmpl.ExecuteTemplate(os.Stdout, "index.html", myName)
 	if err != nil {
 		log.Fatalln(err)
 	}
