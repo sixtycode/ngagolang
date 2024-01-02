@@ -1,2 +1,2 @@
 # ngagolang
- latihan golang
+golang latihan
