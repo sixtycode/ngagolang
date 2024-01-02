@@ -14,6 +14,8 @@ import (
 // Declare type pointer to a template
 var tmpl *template.Template
 
+var nama = []string{"Ujang", "Asep", "Udin", "Dadang"}
+
 // Using the init function to make sure the template is only parsed once in the program
 func init() {
 	// template.Must takes the reponse of template.ParseFiles and does error checking
@@ -24,8 +26,7 @@ func init() {
 func main() {
 	fmt.Println("Hello, World!\n")
 	// Execute myName into the template and print to Stdout
-	myName := "Fajrin"
-	err := tmpl.ExecuteTemplate(os.Stdout, "index.html", myName)
+	err := tmpl.ExecuteTemplate(os.Stdout, "index.html", nama)
 	if err != nil {
 		log.Fatalln(err)
 	}
