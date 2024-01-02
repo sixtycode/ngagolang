@@ -17,7 +17,7 @@ var tmpl *template.Template
 // Using the init function to make sure the template is only parsed once in the program
 func init() {
 	// template.Must takes the reponse of template.ParseFiles and does error checking
-	tmpl = template.Must(template.ParseFiles("templates/template.html"))
+	tmpl = template.Must(template.ParseGlob("templates/*"))
 }
 
 // Parse all the files in a certain directory
@@ -25,8 +25,7 @@ func main() {
 	fmt.Println("Hello, World!\n")
 	// Execute myName into the template and print to Stdout
 	myName := "Fajrin"
-	myTeam := "Vio"
-	err := tmpl.Execute(os.Stdout, myName, myTeam)
+	err := tmpl.Execute(os.Stdout, myName)
 	if err != nil {
 		log.Fatalln(err)
 	}
