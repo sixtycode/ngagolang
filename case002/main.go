@@ -15,8 +15,8 @@ import (
 var tmpl *template.Template
 
 type StrukturData struct {
-	id   int
 	Nama string
+	Umur int
 }
 
 // Using the init function to make sure the template is only parsed once in the program
@@ -29,13 +29,9 @@ func init() {
 func main() {
 	fmt.Println("Hello, World!\n")
 	// Execute myName into the template and print to Stdout
-	id := id++
-	data := []StrukturData{
-		StrukturData{
-		ids := id 
-		Nama := "Udin"
-		},
-
+	var data StrukturData
+	data.Nama = "Udin"
+	data.Umur = 19
 	err := tmpl.ExecuteTemplate(os.Stdout, "index.gohtml", &data)
 	if err != nil {
 		log.Fatalln(err)
