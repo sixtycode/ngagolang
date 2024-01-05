@@ -32,7 +32,7 @@ func main() {
 	var data StrukturData
 	data.Nama = "Udin"
 	data.Umur = 19
-	err := tmpl.ExecuteTemplate(os.Stdout, "index.html", &data)
+	err := tmpl.ExecuteTemplate(os.Stdout, "index.gohtml", &data)
 	if err != nil {
 		log.Fatalln(err)
 	}
