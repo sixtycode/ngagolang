@@ -12,7 +12,7 @@
 
     <p>Daftar Antrian:</p>
     <ol>
-        {{range $index, $element := .StrukturData}}
+        {{range .StrukturData}}
         <li>{{.}}</li>
         {{ end }}
     </ol>
