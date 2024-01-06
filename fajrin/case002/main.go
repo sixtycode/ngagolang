@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 type MahlukHidup interface {
-	berbicara() string int
+	berbicara() string
 }
 
 type Orang struct {
@@ -11,7 +11,7 @@ type Orang struct {
 	umur int
 }
 
-func (o Orang) berbicara() string int {
+func (o Orang) berbicara() string {
 	return fmt.Println("Saya Orang Bernama", o.nama, ", Umur Saya", o.umur)
 }
 
@@ -20,11 +20,11 @@ type Hewan struct {
 	umur int
 }
 
-func (h Hewan) berbicara() string int {
+func (h Hewan) berbicara() string {
 	return fmt.Println("KuruKuru Watashi Wa", h.nama, "Desu, Nenrei Wa", h.umur, "Sai Desu")
 }
 
-func speak(m MahlukHidup) string int {
+func speak(m MahlukHidup) string {
 	return m.berbicara()
 }
 
