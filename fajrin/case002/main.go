@@ -38,12 +38,8 @@ func speak(m MahlukHidup) {
 
 func main() {
 
-	// fajrin := Orang{"Fajrin", 25}
+	fajrin := Orang{"Fajrin", 25}
 	// kirby := Hewan{"Kirby", 7}
-
-	var fajrin Orang
-	fajrin.nama = "Fajrin"
-	fajrin.umur = 25
 
 	speak(fajrin)
 
