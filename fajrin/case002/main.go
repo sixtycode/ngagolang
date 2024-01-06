@@ -41,17 +41,20 @@ type Hewan struct {
 
 func speak(m MahlukHidup) {
 
-	if &m == &Orang {
-		fmt.Println("Saya Orang Bernama", m.name(), ", Umur Saya", m.age())
-	}
+	// if m == &Orang {
+	fmt.Println("Saya Orang Bernama", m.name(), ", Umur Saya", m.age())
+	// }
 
 }
 
+func speak2(m MahlukHidup) {
+	fmt.Println("KuruKuru Watashi Wa", m.name(), "Desu, Nenrei Wa", m.age(), "Sai Desu")
+}
 func main() {
 
 	fajrin := Orang{"Fajrin", 25}
 	kirby := Hewan{"Kirby", 7}
 
 	speak(fajrin)
-	speak(kirby)
+	speak2(kirby)
 }
