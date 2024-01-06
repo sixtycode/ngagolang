@@ -40,7 +40,11 @@ type Hewan struct {
 // }
 
 func speak(m MahlukHidup) {
-	fmt.Println("Saya Orang Bernama", m.name(), ", Umur Saya", m.age())
+
+	if &m == &Orang {
+		fmt.Println("Saya Orang Bernama", m.name(), ", Umur Saya", m.age())
+	}
+
 }
 
 func main() {
