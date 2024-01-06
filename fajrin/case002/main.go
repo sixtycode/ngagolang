@@ -13,17 +13,20 @@ type hewan struct {
 }
 
 type mahlukHidup interface {
-}
-
-func berbicara() {
-
+	berbicara() string
 }
 
 func speak(m mahlukHidup) {
-
+	fmt.Println(m.)
 }
 
 func main() {
+	var 
 	fmt.Println("Halo Dunia")
+	fajrin.berbicara()
+	kirby.berbicara()
+
+	speak()
 
 }
+ 
