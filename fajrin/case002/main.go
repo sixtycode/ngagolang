@@ -2,40 +2,37 @@ package main
 
 import "fmt"
 
-type mahlukHidup interface {
-	berbicara() string
+type MahlukHidup interface {
+	berbicara() string int
 }
 
-type orang struct {
+type Orang struct {
 	nama string
 	umur int
 }
 
-func (o orang) berbicara() string {
-	fmt.Println("Saya Orang Bernama", o.nama, ", Umur Saya", o.umur)
+func (o Orang) berbicara() string int {
+	return fmt.Println("Saya Orang Bernama", o.nama, ", Umur Saya", o.umur)
 }
 
-type hewan struct {
+type Hewan struct {
 	nama string
 	umur int
 }
 
-func (h hewan) berbicara() string {
-	fmt.Println("KuruKuru Watashi Wa", h.nama, "Desu, Nenrei Wa", h.umur, "Sai Desu")
+func (h Hewan) berbicara() string int {
+	return fmt.Println("KuruKuru Watashi Wa", h.nama, "Desu, Nenrei Wa", h.umur, "Sai Desu")
 }
 
-
-func speak(m mahlukHidup) berbicara() string{
-	fmt.Println(m.)
+func speak(m MahlukHidup) string int {
+	return m.berbicara()
 }
 
 func main() {
-	var 
-	fmt.Println("Halo Dunia")
-	fajrin.berbicara()
-	kirby.berbicara()
 
-	speak()
+	fajrin := Orang{"Fajrin", 25}
+	kirby := Hewan{"Kirby", 7}
 
+	speak(fajrin)
+	speak(kirby)
 }
- 
