@@ -14,35 +14,40 @@ type Orang struct {
 
 func (o Orang) name() string {
 	return o.nama
-	// fmt.Println("Saya Orang Bernama", o.nama)
-	// , ", Umur Saya", o.umur)
 }
 
 func (o Orang) age() int {
 	return o.umur
 }
 
-// type Hewan struct {
-// 	nama string
-// 	umur int
-// }
+func (h Hewan) name() string {
+	return h.nama
+	// fmt.Println("Saya Orang Bernama", o.nama)
+	// , ", Umur Saya", o.umur)
+}
+
+func (h Hewan) age() int {
+	return h.umur
+}
+
+type Hewan struct {
+	nama string
+	umur int
+}
 
 // func (h Hewan) berbicara() string {
 // 	return fmt.Println("KuruKuru Watashi Wa", h.nama, "Desu, Nenrei Wa", h.umur, "Sai Desu")
 // }
 
 func speak(m MahlukHidup) {
-	fmt.Println(m.name())
-	fmt.Println(m.age())
+	fmt.Println("Saya Orang Bernama", m.name(), ", Umur Saya", m.age())
 }
 
 func main() {
 
 	fajrin := Orang{"Fajrin", 25}
-	// kirby := Hewan{"Kirby", 7}
+	kirby := Hewan{"Kirby", 7}
 
 	speak(fajrin)
-
-	// speak(fajrin)
-	// speak(kirby)
+	speak(kirby)
 }
