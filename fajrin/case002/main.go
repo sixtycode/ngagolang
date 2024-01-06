@@ -16,7 +16,7 @@ type mahlukHidup interface {
 	berbicara() string
 }
 
-func speak(m mahlukHidup) {
+func speak(m mahlukHidup) berbicara() string{
 	fmt.Println(m.)
 }
 
