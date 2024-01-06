@@ -2,9 +2,17 @@ package main
 
 import "fmt"
 
+type mahlukHidup interface {
+	berbicara() string
+}
+
 type orang struct {
 	nama string
 	umur int
+}
+
+func (o orang) berbicara() string {
+	fmt.Println("Saya Orang Bernama", o.nama, ", Umur Saya", o.umur)
 }
 
 type hewan struct {
@@ -12,9 +20,10 @@ type hewan struct {
 	umur int
 }
 
-type mahlukHidup interface {
-	berbicara() string
+func (h hewan) berbicara() string {
+	fmt.Println("KuruKuru Watashi Wa", h.nama, "Desu, Nenrei Wa", h.umur, "Sai Desu")
 }
+
 
 func speak(m mahlukHidup) berbicara() string{
 	fmt.Println(m.)
