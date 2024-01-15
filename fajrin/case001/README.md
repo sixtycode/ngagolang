@@ -1,5 +1,5 @@
 Case 1
-#### Buatlah program untuk membuat tipe data struct yang mempunyai 3 attribute:
+Buatlah program untuk membuat tipe data struct yang mempunyai 3 attribute:
 - nama -> string
 - umur -> int
 - alamat -> string
