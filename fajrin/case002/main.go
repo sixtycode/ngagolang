@@ -3,8 +3,7 @@ package main
 import "fmt"
 
 type MahlukHidup interface {
-	name() string
-	age() int
+	berbicara()
 }
 
 type Orang struct {
@@ -12,49 +11,26 @@ type Orang struct {
 	umur int
 }
 
-func (o Orang) name() string {
-	return o.nama
-}
-
-func (o Orang) age() int {
-	return o.umur
-}
-
-func (h Hewan) name() string {
-	return h.nama
-	// fmt.Println("Saya Orang Bernama", o.nama)
-	// , ", Umur Saya", o.umur)
-}
-
-func (h Hewan) age() int {
-	return h.umur
-}
-
 type Hewan struct {
 	nama string
 	umur int
 }
 
-// func (h Hewan) berbicara() string {
-// 	return fmt.Println("KuruKuru Watashi Wa", h.nama, "Desu, Nenrei Wa", h.umur, "Sai Desu")
-// }
+func (o Orang) berbicara() {
+	fmt.Println("Saya Orang Bernama", o.nama, ", Umur Saya", o.umur)
+}
+
+func (h Hewan) berbicara() {
+	fmt.Println("KuruKuru Watashi Wa", h.nama, "Desu, Nenrei Wa", h.umur, "Sai Desu")
+}
 
 func speak(m MahlukHidup) {
-
-	// if m == &Orang {
-	fmt.Println("Saya Orang Bernama", m.name(), ", Umur Saya", m.age())
-	// }
-
+	m.berbicara()
 }
 
-func speak2(m MahlukHidup) {
-	fmt.Println("KuruKuru Watashi Wa", m.name(), "Desu, Nenrei Wa", m.age(), "Sai Desu")
-}
 func main() {
-
 	fajrin := Orang{"Fajrin", 25}
 	kirby := Hewan{"Kirby", 7}
-
 	speak(fajrin)
-	speak2(kirby)
+	speak(kirby)
 }
