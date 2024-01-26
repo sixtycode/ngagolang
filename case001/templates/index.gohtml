@@ -1,14 +1,21 @@
 {{define "index"}}
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         {{template "header"}}
     </head>
     <body>
         <p>Page: Index</p>
-        <p>Welcome {{.Nama}}</p>
+        <p>Welcome {{.}}</p>
+        {{range $val := .}}
+            <p>{{$val}}</p>
+        {{end}}
+        {{range $val := .}}
+            <p>Nama: {{$val.Nama}}</p>
+            <p>Umur: {{$val.Umur}}</p>
+        {{end}}
     <footer>
-	{{template "footer"}}
+	    {{template "footer"}}
     </footer>
     </body>
 </html>
