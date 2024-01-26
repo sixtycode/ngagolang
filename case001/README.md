@@ -1,16 +1,16 @@
 # Studi Kasus (Golang)
 ### Buatlah aplikasi
-:white_check_mark: 1. Baca file html 
-:white_check_mark: 2. Passing data ke html
+- [x] 1. Baca file html 
+- [x] 2. Passing data ke html
 
-:white_check_mark: *Ga harus ditampilin ke browser `(os.Stdout)`
+- [x] *Ga harus ditampilin ke browser `(os.Stdout)`
 
 ### Kisi2:
-:white_check_mark: pake library `text/template`
-:white_check_mark: - `ParseFiles/ParseGlob`
-:white_check_mark: - `Execute/ExecuteTemplate`
+- [x] pake library `text/template`
+- [x] - `ParseFiles/ParseGlob`
+- [x] - `Execute/ExecuteTemplate`
 
 ### Case 1 OK 
-:white_check_mark: - Passing data more than 1
-:white_check_mark: - `ExecuteTemplate`
-:white_check_mark: - Push Repo folder case1
+- [x] - Passing data more than 1
+- [x] - `ExecuteTemplate`
+- [x] - Push Repo folder case1
