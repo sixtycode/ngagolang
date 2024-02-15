@@ -9,7 +9,7 @@ import (
 var tmpl *template.Template
 
 type StrukturData struct {
-	id   int
+	Id   int
 	Nama string
 }
 
