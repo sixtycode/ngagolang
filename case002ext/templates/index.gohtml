@@ -25,12 +25,20 @@
             </tfoot>
             <tbody>
                 {{range $val := .}}
-                    <tr>
-                        <th>{{$val.Id}}</th>
-                        <td>{{$val.Nama}}</td>
-                        <td>{{$val.Nilai}}</td>
-                    </tr>
-                {{ end }}
+                    {{if le $val.Nilai 80.0 }}
+                        <tr>
+                            <th>{{$val.Id}}</th>
+                            <td>{{$val.Nama}}</td>
+                            <td class="is-selected has-background-danger">{{$val.Nilai}}</td>
+                        </tr>
+                    {{else}}
+                        <tr>
+                            <th>{{$val.Id}}</th>
+                            <td>{{$val.Nama}}</td>
+                            <td>{{$val.Nilai}}</td>
+                        </tr>
+                    {{end}}
+                {{end}}
             </tbody>
         </table>
     </section>
