@@ -6,26 +6,33 @@
     </head>
     <body>
     <section class="section">
-        <table class="table">
-            <thead>
-
-            </thead>
-            <tfoot>
-                
-            </tfoot>
-            <tbody>
-
-            </tbody>
-        </table>
         <h1>Selamat Datang di SMK TADIKA MESRA</h1>
         <p>Pangkalan Data Siswa</p>
-        <ul>
-            {{range $val := .}}
-                <li>Nomor: {{$val.Id}}</li>
-                <li>Nama: {{$val.Nama}}</li>
-                <li>Nama: {{$val.Nilai}}</li>
-            {{ end }}
-        </ul>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th><abbr title="Nomor">No</abbr></th>
+                    <th>Nama</th>
+                    <th>Nilai</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th><abbr title="Nomor">No</abbr></th>
+                    <th>Nama</th>
+                    <th>Nilai</th>
+                </tr> 
+            </tfoot>
+            <tbody>
+                {{range $val := .}}
+                    <tr>
+                        <th>{{$val.Id}}</th>
+                        <td>{{$val.Nama}}</td>
+                        <td>{{$val.Nilai}}</td>
+                    </tr>
+                {{ end }}
+            </tbody>
+        </table>
     </section>
     <footer>
 	    {{template "footer"}}
