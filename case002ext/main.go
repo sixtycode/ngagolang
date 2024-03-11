@@ -14,6 +14,11 @@ type StrukturData struct {
 	Nilai float32
 }
 
+type WebData struct {
+	Title    string
+	Kumpulan []StrukturData
+}
+
 func init() {
 	tmpl = template.Must(template.ParseGlob("templates/*"))
 }
@@ -36,7 +41,10 @@ func main() {
 		{14, "Samantha D. Larsson", 71.5},
 	}
 
-	err := tmpl.ExecuteTemplate(os.Stdout, "index", data)
+	judul := "Percobaan Passing"
+	databaru := WebData{judul, data}
+	
+	err := tmpl.ExecuteTemplate(os.Stdout, "index", databaru)
 	if err != nil {
 		log.Fatalln(err)
 	}

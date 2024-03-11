@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        {{template "header"}}
+        {{template "header" .Title }}
     </head>
     <body>
     <section class="section">
@@ -24,20 +24,12 @@
                 </tr> 
             </tfoot>
             <tbody>
-                {{range $val := .}}
-                    {{if le $val.Nilai 80.0 }}
+                {{range $val := .Kumpulan}}
                         <tr>
                             <th>{{$val.Id}}</th>
                             <td>{{$val.Nama}}</td>
-                            <td class="is-selected has-background-danger">{{$val.Nilai}}</td>
+                            <td class="{{if le $val.Nilai 80.0}}is-selected has-background-danger{{end}}">{{$val.Nilai}}</td>
                         </tr>
-                    {{else}}
-                        <tr>
-                            <th>{{$val.Id}}</th>
-                            <td>{{$val.Nama}}</td>
-                            <td>{{$val.Nilai}}</td>
-                        </tr>
-                    {{end}}
                 {{end}}
             </tbody>
         </table>
